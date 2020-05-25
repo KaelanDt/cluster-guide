@@ -50,6 +50,18 @@ A complete guide can be found [here](https://wikis.nyu.edu/display/NYUHPC/Copy+o
 
 ### Jupiter interacting notebook 
 
+#### Windows
+
+Install PuTTY. Then, open it and enter " th-top.mpq.univ-paris-diderot.fr " in host name, connection type "SSH".
+
+Go to the "Connection" tab and put a small number (240 for example) in "Seconds between keepalives". (This allows the server to not disconnect quickly). Tick "Enable TCP keepalives".
+
+Finally, go to "Connection - SSH - Tunnels" tab. In source port, type "8090" in source port, and "localhost:8090" in destination. Go back to "Session", click save and you won't have to do all this again.
+
+Then, click "open", a terminal should pop and you can enter your username and password for th-top. Connect to localhost:8090 via a web browser and you are all set.
+
+#### OS-linux
+
 From your local computer, connect to th-top with the present command:
 ```
 ssh -L 8090:localhost:8090 YOURLOGIN@th-top.mpq.univ-paris-diderot.fr
